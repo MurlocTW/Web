@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - materials - dynamic cube reflection</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -29,8 +28,6 @@
 	</head>
 	<body>
 
-		<div id="info"><a href="http://threejs.org" target="_blank" rel="noopener">three.js webgl</a> - materials - dynamic cube reflection<br/>Photo by <a href="http://www.flickr.com/photos/jonragnarsson/2294472375/" target="_blank" rel="noopener">J&oacute;n Ragnarsson</a>.</div>
-
 		<script src="../build/three.js"></script>
 		<script src="js/loaders/EquirectangularToCubeGenerator.js"></script>
 
@@ -48,7 +45,7 @@
 
 			var textureLoader = new THREE.TextureLoader();
 
-			textureLoader.load( 'textures/2294472375_24a3b8ef46_o.jpg', function ( texture ) {
+			textureLoader.load( 'textures/hdri-hugin-japan-153103-o.jpg', function ( texture ) {
 
 				texture.mapping = THREE.UVMapping;
 
@@ -105,7 +102,7 @@
 				cube = new THREE.Mesh( new THREE.BoxBufferGeometry( 20, 20, 20 ), material );
 				scene.add( cube );
 
-				torus = new THREE.Mesh( new THREE.TorusKnotBufferGeometry( 10, 5, 100, 25 ), material );
+				torus = new THREE.Mesh( new THREE.BoxBufferGeometry( 20, 20, 20 ), material );
 				scene.add( torus );
 
 				//
